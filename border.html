@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Border</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="http://static.udache.com/gulfstream/webapp/css/didi.min.css">
+	<style>
+		body{
+			background: #fff;
+		}
+		li{
+			list-style: none;
+		}
+		.transform{
+			width: 100%;
+			height: 50px;
+			margin-top: 10px;
+		}
+		.transform li{
+			/*float: left;*/
+			width: 50%;
+			height: 100%;
+			margin: 5px;
+			text-align: center;
+			line-height: 50px;
+
+		}
+
+		.doing{
+			/*border-bottom: 1px solid #e5e5e5;*/
+			position: relative;
+		}
+
+		.doing:after{
+			content: "";
+			display: block;
+			/*width: 100%;*/
+			width: 200%;
+			height: 200%;
+			/*border-bottom: 1px solid #ff0000;
+			border-top: 1px solid #ff0000;*/
+			border: 1px solid #ff0000;
+			/*border-radius: 4px;*/
+			border-radius: 8px;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			/*-webkit-transform: scaleY(0.5);
+			transform: scaleY(0.5);
+			-webkit-transform-origin: 0 0;
+			transform-origin: 0 0;*/
+
+			-webkit-transform: scale(0.5);
+			transform: scale(0.5);
+			-webkit-transform-origin: 0 0;
+			transform-origin: 0 0;
+
+		}
+
+		/*.doing:before {
+			content: "";
+			display: block;
+			width: 200%;
+			height: 50px;
+			border-right: 1px solid #ff0000;
+			border-left: 1px solid #ff0000;
+			border-radius: 4px;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			-webkit-transform: scaleX(0.5);
+			transform: scaleX(0.5);
+			-webkit-transform-origin: 0 0;
+			-trnasform-origin: 0 0;
+		}*/
+
+		.history{
+			border-radius: 4px;
+			-webkit-box-shadow: 1px 0px 1px -1px rgba(0, 0, 0, 1),-1px 0px 1px -1px rgba(0, 0, 0, 1),0px 1px 1px -1px rgba(0, 0, 0, 1),0px -1px 1px -1px rgba(0, 0, 0, 1);
+			box-shadow: 1px 0px 1px -1px rgba(0, 0, 0, 1),-1px 0px 1px -1px rgba(0, 0, 0, 1),0px 1px 1px -1px rgba(0, 0, 0, 1),0px -1px 1px -1px rgba(0, 0, 0, 1);
+		}
+
+		.background{
+			background-image:linear-gradient(180deg, red, red 50%, transparent 50%),
+			linear-gradient(270deg, red, red 50%, transparent 50%),
+			linear-gradient(0deg, red, red 50%, transparent 50%),
+			linear-gradient(90deg, red, red 50%, transparent 50%);
+			background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+			background-repeat: no-repeat;
+			background-position: top, right top,  bottom, left top;
+		}
+
+		.rotate{
+			height: 50px;
+			position: relative;
+			/*border-top: 1px solid blue;*/
+			/*border-right: 1px solid blue;*/
+			/*border-bottom: 1px solid blue;*/
+			/*border-left: 1px solid blue;*/
+		}
+
+		.rotate:after{
+			content: "";
+			display: block;
+			width: 100%;
+			/*height: 50px;*/
+			height: 100%;
+			border-top: 1px solid blue;
+			border-left: 1px solid blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			-webkit-transform: rotateX(45deg);
+			transform: rotateX(45deg);
+		}
+
+		.rotate:before{
+			content: "";
+			display: block;
+			width: 100%;
+			/*height: 65px;*/
+			height: 100%;
+			border-right: 1px solid blue;
+			border-bottom: 1px solid blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			-webkit-transform: rotateX(45deg);
+			transform: rotateX(45deg);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="transform">
+		<ul>
+			<li class="doing">transform:scale</li>
+			<li class="history">box-shadow</li>
+
+			<!-- <li class="background">backgroud-image</li> -->
+			<li class="rotate">rotate</li>
+		</ul>
+	</div>
+</body>
+</html>
